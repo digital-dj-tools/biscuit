@@ -61,10 +61,10 @@
                   0x00
                   message))
 
-(defn crc16
-  "Calculates the CRC16 checksum"
+(defn crc16-arc
+  "Calculates the CRC16 ARC checksum"
   [message]
-  (digest-message lookup/crc16
+  (digest-message lookup/crc16-arc
                   identity
                   #(bit-shift-right % 8)
                   0x00ffff
@@ -75,7 +75,7 @@
 (defn crc16-usb
   "Calculates the CRC16 USB checksum"
   [message]
-  (digest-message lookup/crc16
+  (digest-message lookup/crc16-arc
                   identity
                   #(bit-shift-right % 8)
                   0x00ffff

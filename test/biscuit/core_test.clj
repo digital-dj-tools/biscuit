@@ -7,7 +7,7 @@
   (is (= (crc5 "biscuit") 79))
   (is (= (crc8-1wire "biscuit") 151))
   (is (= (crc8 "biscuit") 133))
-  (is (= (crc16 "biscuit") 56686))
+  (is (= (crc16-arc "biscuit") 56686))
   (is (= (crc16-usb "biscuit") 8842))
   (is (= (crc16-ccitt "biscuit") 47310))
   (is (= (crc16-dnp "biscuit") 31858))
